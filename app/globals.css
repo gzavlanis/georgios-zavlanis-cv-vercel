@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f2f2f0;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   PRINT STYLES
+   These rules run ONLY when printing or saving as PDF
+   ========================================
+*/
+@media print {
+  /* 1. Reset Body: Remove the gray background, make it white */
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 2. Hide UI Elements: Hide anything with the class 'print:hidden' or 'no-print' */
+  .no-print,
+  [class*="print:hidden"] {
+    display: none !important;
+  }
+
+  /* 3. Layout Reset: Remove padding from the main container so it fits the paper */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    min-height: auto !important;
+  }
+
+  /* 4. The Paper Transform:
+     - Remove the shadow (ink waste/looks bad)
+     - Remove the max-width restriction
+     - Remove the gray border/margins
+  */
+  .a4-paper {
+    box-shadow: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    padding-top: 0 !important; /* Optional: Adjust based on printer margins */
+  }
+
+  /* 5. Typography Fixes: Ensure text is black and links aren't blue/underlined weirdly */
+  h1, h2, h3, h4, p, span, li {
+    color: black !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  /* 6. Page Breaking: Prevent awkward breaks inside experience items */
+  section {
+    break-inside: avoid;
+  }
+
+  /* Ensure the decorative top line is hidden if you used absolute positioning */
+  .absolute {
+    display: none !important;
+  }
+}
