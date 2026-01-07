@@ -1,25 +1,72 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
+import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/constants";
 import "./globals.css";
 import React from "react";
 
-const playfair = Playfair_Display({
+const montserrat = Montserrat({
     subsets: ["latin"],
-    variable: "--font-playfair",
+    variable: "--font-heading",
     display: "swap",
 });
 
-// ΕΔΩ είναι συνήθως το πρόβλημα
-const lato = Lato({
-    weight: ["300", "400", "700"],
+const inter = Inter({
     subsets: ["latin"],
-    variable: "--font-lato",
+    variable: "--font-body",
     display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: "Georgios Zavlanis | CV",
-    description: "Full Stack Developer Resume",
+    metadataBase: new URL(BASE_URL),
+    title: {
+        default: SITE_NAME,
+        template: `%s | Georgios Zavlanis`,
+    },
+    description: SITE_DESCRIPTION,
+    keywords: ["Full Stack Developer", "Software Engineer", "React", "Next.js", "Node.js", "Python", "Georgios Zavlanis", "Athens", "Resume", "CV"],
+    authors: [{ name: "Georgios Zavlanis" }],
+    creator: "Georgios Zavlanis",
+
+    alternates: {
+        canonical: '/en',
+        languages: {
+            'en': '/en',
+            'el': '/el',
+        },
+    },
+
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        alternateLocale: ["el_GR"],
+        url: BASE_URL,
+        title: SITE_NAME,
+        description: SITE_DESCRIPTION,
+        siteName: SITE_NAME,
+        images: [
+            {
+                url: "/profile.jpg",
+                width: 800,
+                height: 800,
+                alt: "Georgios Zavlanis Profile",
+            },
+        ],
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: SITE_NAME,
+        description: SITE_DESCRIPTION,
+        images: ["/profile.jpg"],
+    },
+
+    icons: {
+        icon: '/icon.svg',
+    },
+
+    verification: {
+        google: 'bC0O_L9ND2sJAyd5ibD7uOZR7V32tr_Ul6jXAZ4FyfA',
+    },
 };
 
 export default function RootLayout({
@@ -28,8 +75,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
-            <body className="bg-[#f2f2f0] text-neutral-900 font-lato antialiased">
+        <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
+            <body className="bg-[#f2f2f0] text-neutral-900 font-body antialiased">
                 {children}
             </body>
         </html>

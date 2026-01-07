@@ -26,7 +26,7 @@ export default async function Home({ params }: Props) {
                 <div className="absolute top-0 left-0 w-full h-2 bg-neutral-900 print:hidden"></div>
                 <div className="space-y-12">
                     {/* Περνάμε τα μεταφρασμένα δεδομένα */}
-                    <Hero data={dict.hero} contact={dict.contact} />
+                    <Hero data={dict.hero} contact={dict.contact} about={dict.about}/>
 
                     <hr className="border-t border-neutral-200 my-6" />
 

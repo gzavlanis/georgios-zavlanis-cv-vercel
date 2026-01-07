@@ -7,7 +7,7 @@ export const data = {
             title: "Full Stack Developer & Software Engineer",
             ctaPrimary: "Contact Me",
             ctaSecondary: "Download CV",
-            cvLink: "/assets/files/Georgios-ZavlanisResume.pdf", // Ensure you put the PDF in public/assets/files/
+            cvLink: "/assets/files/Georgios-ZavlanisCV.pdf",
         },
         contact: {
             email: "gzavlanis@gmail.com",
@@ -20,16 +20,25 @@ export const data = {
         },
         about: {
             title: "About Me",
-            description: "I am a graduate of the Department of Informatics and Telecommunications of the University of Peloponnese. Through my thesis, I specialized in Deep Learning applications for Telecommunications. Currently, I am working as a Full Stack Developer in a startup betting company and pursuing my Master's Degree in Machine Learning and Data Science at the Hellenic Open University.",
+            description: "I am a graduate of the Department of Informatics and Telecommunications of the University of Peloponnese. Currently, I am working as a Full Stack Developer and pursuing my Master's Degree in Machine Learning and Data Science at the Hellenic Open University.",
         },
         experience: {
             title: "Professional Experience",
             jobs: [
                 {
+                    company: "W-LABEL",
+                    location: "Palaio Faliro, Greece",
+                    role: "Full Stack Developer",
+                    period: "Sep 2024 - Jul 2025",
+                    description: [
+                        "Involved in the development of the ERP Product for Restaurants, using Typescript and ReactJS.",
+                    ],
+                },
+                {
                     company: "Skill90 Startup Betting Company",
                     location: "Agios Dimitrios, Greece",
                     role: "Full Stack Developer",
-                    period: "Jan 2023 - Present",
+                    period: "Jan 2023 - Aug 2024",
                     description: [
                         "Involved in the development of software for processing, storage, and data flow using NodeJS and Python.",
                         "Created frontend tools for data visualization, statistics, and user processes using ReactJS.",
@@ -91,7 +100,7 @@ export const data = {
             title: "Technical Stack",
             list: [
                 "Python", "JavaScript", "TypeScript", "Node.js", "React.js", "Redux", "Next.js",
-                "MySQL","PostgreSQL", "MongoDB", "Redis", "RabbitMQ",
+                "MySQL","PostgresSQL", "MongoDB", "Redis", "RabbitMQ",
                 "Docker", "Tensorflow", "Pandas", "ExpressJS",
                 "HTML5", "CSS3", "ChatGPT API"
             ],
@@ -111,7 +120,7 @@ export const data = {
             title: "Full Stack Developer & Software Engineer",
             ctaPrimary: "Επικοινωνία",
             ctaSecondary: "Λήψη Βιογραφικού",
-            cvLink: "/assets/files/Georgios-ZavlanisResume.pdf",
+            cvLink: "/assets/files/Georgios-ZavlanisCV.pdf",
         },
         contact: {
             email: "gzavlanis@gmail.com",
@@ -124,16 +133,25 @@ export const data = {
         },
         about: {
             title: "Σχετικά με εμένα",
-            description: "Είμαι απόφοιτος του Τμήματος Πληροφορικής και Τηλεπικοινωνιών του Πανεπιστημίου Πελοποννήσου. Μέσω της πτυχιακής μου εργασίας, ειδικεύτηκα σε εφαρμογές Deep Learning για Τηλεπικοινωνίες. Αυτή την περίοδο εργάζομαι ως Full Stack Developer σε startup εταιρεία στον χώρο του betting, ενώ παράλληλα πραγματοποιώ το Μεταπτυχιακό μου στη Μηχανική Μάθηση και την Επιστήμη Δεδομένων στο Ελληνικό Ανοικτό Πανεπιστήμιο.",
+            description: "Είμαι απόφοιτος του Τμήματος Πληροφορικής και Τηλεπικοινωνιών του Πανεπιστημίου Πελοποννήσου. Αυτή την περίοδο εργάζομαι ως Full Stack Developer, ενώ παράλληλα πραγματοποιώ το Μεταπτυχιακό μου στη Μηχανική Μάθηση και την Επιστήμη Δεδομένων στο Ελληνικό Ανοικτό Πανεπιστήμιο.",
         },
         experience: {
             title: "Επαγγελματική Εμπειρία",
             jobs: [
                 {
+                    company: "W-LABEL",
+                    location: "Παλαιό Φάληρο, Αττική",
+                    role: "Full Stack Developer",
+                    period: "Σεπ 2024 - Ιούλ 2025",
+                    description: [
+                        "Συμμετοχή στην ανάπτυξη του βασικού προϊόντος λογισμικού ERP, για μικρές επιχειρήσεις εστίασης και εστιατόρια, χρησιμοποιώντας Typescript και ReactJS.",
+                    ],
+                },
+                {
                     company: "Skill90 Startup Betting Company",
                     location: "Άγιος Δημήτριος, Αττική",
                     role: "Full Stack Developer",
-                    period: "Ιαν 2023 - Παρόν",
+                    period: "Ιαν 2023 - Αύγ 2024",
                     description: [
                         "Συμμετοχή στην ανάπτυξη λογισμικού για την επεξεργασία, αποθήκευση και ροή δεδομένων χρησιμοποιώντας NodeJS και Python.",
                         "Δημιουργία frontend εργαλείων για οπτικοποίηση δεδομένων και στατιστικών, καθώς και για εκτέλεση διεργασιών από την πλευρά του χρήστη με ReactJS.",
@@ -195,7 +213,7 @@ export const data = {
             title: "Τεχνικές Δεξιότητες",
             list: [
                 "Python", "JavaScript", "TypeScript", "Node.js", "React.js", "Redux", "Next.js",
-                "MySQL","PostgreSQL", "MongoDB", "Redis", "RabbitMQ",
+                "MySQL","PostgresSQL", "MongoDB", "Redis", "RabbitMQ",
                 "Docker", "Tensorflow", "Pandas", "ExpressJS",
                 "HTML5", "CSS3", "ChatGPT API"
             ],
