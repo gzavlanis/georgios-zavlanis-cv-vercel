@@ -26,6 +26,16 @@ export const data = {
             title: "Professional Experience",
             jobs: [
                 {
+                    company: "Primer Software",
+                    location: "Chalandri, Greece",
+                    role: "Full Stack Developer",
+                    period: "Aug 2025 - Present",
+                    description: [
+                        "Involved in the development of the ERP Product, using Typescript and ReactJS with Redux.",
+                        "Involved in the development of AI products using Python and Deep Learning libraries."
+                    ],
+                },
+                {
                     company: "W-LABEL",
                     location: "Palaio Faliro, Greece",
                     role: "Full Stack Developer",
@@ -138,6 +148,16 @@ export const data = {
         experience: {
             title: "Επαγγελματική Εμπειρία",
             jobs: [
+                {
+                    company: "Primer Software",
+                    location: "Χαλάνδρι Αττικής",
+                    role: "Full Stack Developer",
+                    period: "Αύγ 2025 - Present",
+                    description: [
+                        "Συμμετοχή στην ανάπτυξη του βασικού προϊόντος λογισμικού ERP, χρησιμοποιώντας Typescript και ReactJS με Redux.",
+                        "Συμμετoχή στην ανάπτυξη προϊόντων Τεχνητής Νοημοσύνης χρησιμοποιώντας Python και βιβλιοθήκες Deep Learning."
+                    ],
+                },
                 {
                     company: "W-LABEL",
                     location: "Παλαιό Φάληρο, Αττική",
