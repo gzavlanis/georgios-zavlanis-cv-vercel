@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/constants";
 import "./globals.css";
 import React from "react";
+import GoogleAnalytics from "@/app/components/GoogleAnalytics";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -78,6 +79,7 @@ export default function RootLayout({
         <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
             <body className="bg-[#f2f2f0] text-neutral-900 font-body antialiased">
                 {children}
+                <GoogleAnalytics />
             </body>
         </html>
     );
