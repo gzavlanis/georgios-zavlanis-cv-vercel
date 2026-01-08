@@ -119,9 +119,13 @@ export const data = {
             title: "Languages",
             items: ["English (ECCE Degree - University of Michigan)"],
         },
-        interests: {
-            title: "Hobbies & Interests",
-            items: ["Photography", "Creative Writing", "Travelling"],
+        hobbies: {
+            title: "Hobbies",
+            list: [
+                { name: "Travelling", icon: "travel" },
+                { name: "Photography", icon: "camera" },
+                { name: "Reading", icon: "book" },
+            ],
         },
     },
     el: {
@@ -242,9 +246,13 @@ export const data = {
             title: "Γλώσσες",
             items: ["Αγγλικά (ECCE Degree - University of Michigan)"],
         },
-        interests: {
+        hobbies: {
             title: "Ενδιαφέροντα",
-            items: ["Φωτογραφία", "Δημιουργική Γραφή", "Ταξίδια"],
+            list: [
+                { name: "Ταξίδια", icon: "travel" },
+                { name: "Φωτογραφία", icon: "camera" },
+                { name: "Διάβασμα", icon: "book" },
+            ],
         },
     },
 };

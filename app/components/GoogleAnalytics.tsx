@@ -11,12 +11,11 @@ export default function GoogleAnalytics() {
             {/* Initialize Google Analytics */}
             <Script id="google-analytics" strategy="afterInteractive">
                 {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-N670ZE6G14');
-        `}
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-N670ZE6G14');
+                `}
             </Script>
         </>
     );
