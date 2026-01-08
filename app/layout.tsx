@@ -4,6 +4,7 @@ import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/constants";
 import "./globals.css";
 import React from "react";
 import GoogleAnalytics from "@/app/components/GoogleAnalytics";
+import {ThemeProvider} from "@/app/components/ThemeProvider";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -70,16 +71,19 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
-            <body className="bg-[#f2f2f0] text-neutral-900 font-body antialiased">
-                {children}
-                <GoogleAnalytics />
+        <html lang="en" className={`${montserrat.variable} ${inter.variable}`} suppressHydrationWarning>
+            <body className="bg-[#f2f2f0] dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 font-body antialiased transition-colors duration-300">
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    {children}
+                    <GoogleAnalytics />
+                </ThemeProvider>
             </body>
         </html>
     );

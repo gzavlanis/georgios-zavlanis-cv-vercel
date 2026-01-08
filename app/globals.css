@@ -1,77 +1,45 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
 :root {
-  --background: #f2f2f0;
-  --foreground: #171717;
+  --background: #f2f2f0; /* Γραφείο (Light) */
+  --foreground: #171717; /* Κείμενο (Light) */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.dark {
+  --background: #000000; /* Γραφείο (Dark) - Απόλυτο μαύρο */
+  --foreground: #ffffff; /* Κείμενο (Dark) - Απόλυτο λευκό για μέγιστη αντίθεση */
 }
 
-/* ========================================
-   PRINT STYLES
-   These rules run ONLY when printing or saving as PDF
-   ========================================
-*/
-@media print {
-  /* 1. Reset Body: Remove the gray background, make it white */
+@layer base {
   body {
-    background: white !important;
-    color: black !important;
-    margin: 0;
-    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+}
 
-  /* 2. Hide UI Elements: Hide anything with the class 'print:hidden' or 'no-print' */
-  .no-print,
-  [class*="print:hidden"] {
-    display: none !important;
-  }
-
-  /* 3. Layout Reset: Remove padding from the main container so it fits the paper */
-  main {
-    padding: 0 !important;
-    margin: 0 !important;
-    display: block !important;
-    min-height: auto !important;
-  }
-
-  /* 4. The Paper Transform:
-     - Remove the shadow (ink waste/looks bad)
-     - Remove the max-width restriction
-     - Remove the gray border/margins
-  */
+@media print {
+  body { background-color: white !important; color: black !important; }
+  .no-print, [class*="print:hidden"] { display: none !important; }
+  main { padding: 0 !important; margin: 0 !important; display: block !important; }
   .a4-paper {
-    box-shadow: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    border: none !important;
-    padding-top: 0 !important; /* Optional: Adjust based on printer margins */
+    box-shadow: none !important; margin: 0 !important; width: 100% !important;
+    max-width: 100% !important; border: none !important; background: white !important;
+    color: black !important; padding: 0 !important;
   }
-
-  /* 5. Typography Fixes: Ensure text is black and links aren't blue/underlined weirdly */
-  h1, h2, h3, h4, p, span, li {
-    color: black !important;
-    text-shadow: none !important;
-  }
-
-  a {
-    text-decoration: none !important;
-    color: black !important;
-  }
-
-  /* 6. Page Breaking: Prevent awkward breaks inside experience items */
-  section {
-    break-inside: avoid;
-  }
-
-  /* Ensure the decorative top line is hidden if you used absolute positioning */
-  .absolute {
-    display: none !important;
-  }
+  h1, h2, h3, h4, p, span, li, a { color: black !important; text-shadow: none !important; }
+  .absolute { display: none !important; }
 }

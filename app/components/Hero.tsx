@@ -21,41 +21,39 @@ export default function Hero({ data, contact, about }: Props) {
                 />
             </div>
 
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-neutral-900 mb-4 tracking-tight leading-tight">
+            <h1 className="font-heading text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white mb-4 tracking-tight leading-tight">
                 {data.name}
             </h1>
-            <p className="font-lato text-sm uppercase tracking-[0.2em] text-neutral-500 mb-8 border-b border-neutral-100 pb-8 w-1/2 mx-auto">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-8 border-b border-neutral-100 dark:border-neutral-700 pb-8 w-1/2 mx-auto">
                 {data.title}
             </p>
 
-            <div className="max-w-2xl mb-10 px-4">
-                <p className="font-playfair italic text-lg md:text-xl text-neutral-700 leading-relaxed">
-                    &ldquo;{about.description}&rdquo;
-                </p>
-            </div>
+            <p className="font-heading italic text-lg md:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                &ldquo;{about.description}&rdquo;
+            </p>
 
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-600 mb-8 font-light">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-600 dark:text-neutral-400 mb-8 font-light mt-5">
                 <a href={`mailto:${contact.email}`} className="hover:text-black transition-colors flex items-center gap-1">
                     {contact.email}
                 </a>
-                <span className="text-neutral-300 select-none">|</span>
-                <span className="flex items-center gap-1">{contact.phone}</span>
-                <span className="text-neutral-300 select-none">|</span>
-                <span className="flex items-center gap-1">{contact.address}</span>
+                <span className="text-neutral-300 dark:text-neutral-500 select-none">|</span>
+                <span className="flex items-center gap-1 dark:text-neutral-500">{contact.phone}</span>
+                <span className="text-neutral-300 select-none dark:text-neutral-500">|</span>
+                <span className="flex items-center gap-1 dark:text-neutral-500">{contact.address}</span>
             </div>
 
             <div className="flex justify-center gap-5 text-neutral-900">
                 <a
                     href={contact.socials.linkedin}
                     target="_blank"
-                    className="p-2 border border-transparent hover:border-neutral-200 rounded-full transition-all hover:bg-neutral-50"
+                    className="p-2 border border-transparent hover:border-neutral-200 text-neutral-900 dark:text-white dark:border-white rounded-full transition-all hover:bg-neutral-50 dark:hover:bg-neutral-700"
                 >
                     <Linkedin strokeWidth={1.5} size={20} />
                 </a>
                 <a
                     href={contact.socials.github}
                     target="_blank"
-                    className="p-2 border border-transparent hover:border-neutral-200 rounded-full transition-all hover:bg-neutral-50"
+                    className="p-2 border border-transparent hover:border-neutral-200 text-neutral-900 dark:text-white dark:border-white rounded-full transition-all hover:bg-neutral-50 dark:hover:bg-neutral-700"
                 >
                     <Github strokeWidth={1.5} size={20} />
                 </a>

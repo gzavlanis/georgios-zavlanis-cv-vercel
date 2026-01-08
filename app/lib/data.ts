@@ -125,6 +125,7 @@ export const data = {
                 { name: "Travelling", icon: "travel" },
                 { name: "Photography", icon: "camera" },
                 { name: "Reading", icon: "book" },
+                { name: "Creative Writing", icon: "feather" }
             ],
         },
     },
@@ -252,6 +253,7 @@ export const data = {
                 { name: "Ταξίδια", icon: "travel" },
                 { name: "Φωτογραφία", icon: "camera" },
                 { name: "Διάβασμα", icon: "book" },
+                { name: "Συγγραφή", icon: "feather"}
             ],
         },
     },

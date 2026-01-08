@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// --- Custom Black & White SVG Flags ---
 const GrFlagBW = ({ className }: { className?: string }) => (
     <svg viewBox="0 0 24 18" className={className} xmlns="http://www.w3.org/2000/svg">
         <rect width="24" height="18" rx="1" fill="#171717"/>
@@ -37,29 +36,26 @@ const UsFlagBW = ({ className }: { className?: string }) => (
     </svg>
 );
 
-// --- Main Component ---
 export default function LanguageSwitch() {
     const pathname = usePathname();
     const isGreek = pathname.startsWith("/el");
 
     return (
-        <div className="fixed top-4 right-4 z-50 print:hidden">
-            <Link
-                href={isGreek ? "/en" : "/el"}
-                className="pl-3 pr-4 py-2 bg-white/95 backdrop-blur shadow-[0_2px_8px_rgba(0,0,0,0.08)] rounded-full font-bold text-sm hover:bg-neutral-50 transition-all border border-neutral-200 text-neutral-800 flex items-center gap-3 group"
-            >
-                {isGreek ? (
-                    <>
-                        <UsFlagBW className="w-6 h-auto shadow-sm group-hover:shadow transition-shadow" />
-                        <span className="font-lato tracking-wide">English</span>
-                    </>
-                ) : (
-                    <>
-                        <GrFlagBW className="w-6 h-auto shadow-sm group-hover:shadow transition-shadow" />
-                        <span className="font-lato tracking-wide">Ελληνικά</span>
-                    </>
-                )}
-            </Link>
-        </div>
+        <Link
+            href={isGreek ? "/en" : "/el"}
+            className="pl-3 pr-4 py-2 bg-white/95 backdrop-blur shadow-[0_2px_8px_rgba(0,0,0,0.08)] rounded-full font-bold text-sm hover:bg-neutral-50 transition-all border border-neutral-200 text-neutral-800 flex items-center gap-3 group"
+        >
+            {isGreek ? (
+                <>
+                    <UsFlagBW className="w-6 h-auto shadow-sm group-hover:shadow transition-shadow" />
+                    <span className="font-lato tracking-wide">English</span>
+                </>
+            ) : (
+                <>
+                    <GrFlagBW className="w-6 h-auto shadow-sm group-hover:shadow transition-shadow" />
+                    <span className="font-lato tracking-wide">Ελληνικά</span>
+                </>
+            )}
+        </Link>
     );
 }
