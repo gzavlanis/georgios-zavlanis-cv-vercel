@@ -15,7 +15,7 @@ export default function Hobbies({ data }: { data: ResumeData['hobbies'] }) {
                 {data.title}
             </h2>
 
-            <div className="flex justify-between md:justify-start md:gap-16">
+            <div className="grid grid-cols-2 gap-y-8 gap-x-4 md:flex md:justify-start md:gap-16 justify-items-center md:justify-items-start">
                 {data.list.map((hobby, index) => {
                     const IconComponent = iconMap[hobby.icon as keyof typeof iconMap] || BookOpen;
 
@@ -29,8 +29,8 @@ export default function Hobbies({ data }: { data: ResumeData['hobbies'] }) {
                                 />
                             </div>
                             <span className="text-sm font-medium text-neutral-600 dark:text-neutral-400 font-body tracking-wide group-hover:text-neutral-900 dark:group-hover:text-neutral-500">
-                {hobby.name}
-              </span>
+                                {hobby.name}
+                            </span>
                         </div>
                     );
                 })}
