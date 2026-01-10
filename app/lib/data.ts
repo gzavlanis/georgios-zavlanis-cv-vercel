@@ -128,6 +128,15 @@ export const data = {
                 { name: "Creative Writing", icon: "feather" }
             ],
         },
+        contactForm: {
+            title: "Get in Touch",
+            name: "Your Name",
+            email: "Your Email",
+            message: "Your Message",
+            btn: "Send Message",
+            success: "Message sent successfully!",
+            error: "Something went wrong.",
+        },
     },
     el: {
         hero: {
@@ -255,6 +264,15 @@ export const data = {
                 { name: "Διάβασμα", icon: "book" },
                 { name: "Συγγραφή", icon: "feather"}
             ],
+        },
+        contactForm: {
+            title: "Επικοινωνία",
+            name: "Ονοματεπώνυμο",
+            email: "Email",
+            message: "Το Μήνυμά σας",
+            btn: "Αποστολή",
+            success: "Το μήνυμα στάλθηκε επιτυχώς!",
+            error: "Κάτι πήγε στραβά.",
         },
     },
 };

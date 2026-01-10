@@ -8,6 +8,7 @@ import PrintButton from "@/app/components/PrintButton";
 import LanguageSwitch from "@/app/components/LanguageSwitch";
 import ThemeSwitch from "@/app/components/ThemeSwitch";
 import {PaperEntrance, RevealSection} from "@/app/components/Motion";
+import ContactForm from "@/app/components/ContactForm";
 
 type Props = {
     params: Promise<{ lang: 'en' | 'el' }>;
@@ -80,12 +81,19 @@ export default async function Home({ params }: Props) {
                     <RevealSection>
                         <Hobbies data={dict.hobbies} />
                     </RevealSection>
-                </div>
 
-                <div className="mt-16 pt-8 border-t border-neutral-100 dark:border-neutral-800 text-center text-xs text-neutral-400 dark:text-neutral-500 font-serif italic">
-                    Georgios Zavlanis • Full Stack Developer • {new Date().getFullYear()}
-                </div>
+                    <div className="print:hidden">
+                        <hr className="border-t border-neutral-200 dark:border-neutral-700 my-6" />
 
+                        <RevealSection>
+                            <ContactForm data={dict.contactForm} />
+                        </RevealSection>
+                    </div>
+
+                    <div className="mt-16 pt-8 border-t border-neutral-100 dark:border-neutral-800 text-center text-xs text-neutral-400 dark:text-neutral-500 font-serif italic">
+                        Georgios Zavlanis • Full Stack Developer • {new Date().getFullYear()}
+                    </div>
+                </div>
             </PaperEntrance>
         </main>
     );
