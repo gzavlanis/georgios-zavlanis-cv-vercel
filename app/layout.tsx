@@ -4,6 +4,7 @@ import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/app/lib/constants";
 import "./globals.css";
 import React from "react";
 import GoogleAnalytics from "@/app/components/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/next";
 import {ThemeProvider} from "@/app/components/ThemeProvider";
 
 const montserrat = Montserrat({
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
         template: `%s | Georgios Zavlanis`,
     },
     description: SITE_DESCRIPTION,
-    keywords: ["Full Stack Developer", "Software Engineer", "React", "Next.js", "Node.js", "Python", "Georgios Zavlanis", "Athens", "Resume", "CV"],
+    keywords: ["Full Stack Developer", "Software Engineer", "React", "Next.js", "Node.js", "Python", "Georgios Zavlanis", "Athens", "Resume", "CV", "Γεώργιος Ζαβλάνης"],
     authors: [{ name: "Georgios Zavlanis" }],
     creator: "Georgios Zavlanis",
 
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 >
                     {children}
                     <GoogleAnalytics />
+                    <Analytics />
                 </ThemeProvider>
             </body>
         </html>
