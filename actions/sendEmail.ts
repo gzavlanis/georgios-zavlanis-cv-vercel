@@ -9,7 +9,7 @@ const FormDataSchema = z.object({
     message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
-export async function sendEmail(prevState: any, formData: FormData) {
+export async function sendEmail(prevState: never, formData: FormData) {
     const data = Object.fromEntries(formData.entries());
     const result = FormDataSchema.safeParse(data);
 
