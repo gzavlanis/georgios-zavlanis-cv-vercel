@@ -30,14 +30,6 @@ export const metadata: Metadata = {
     authors: [{ name: "Georgios Zavlanis" }],
     creator: "Georgios Zavlanis",
 
-    alternates: {
-        canonical: '/en',
-        languages: {
-            'en': '/en',
-            'el': '/el',
-        },
-    },
-
     openGraph: {
         type: "website",
         locale: "en_US",

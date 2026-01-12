@@ -7,12 +7,27 @@ import Hobbies from "@/app/components/Hobbies";
 import PrintButton from "@/app/components/PrintButton";
 import LanguageSwitch from "@/app/components/LanguageSwitch";
 import ThemeSwitch from "@/app/components/ThemeSwitch";
-import {PaperEntrance, RevealSection} from "@/app/components/Motion";
+import { PaperEntrance, RevealSection } from "@/app/components/Motion";
 import ContactForm from "@/app/components/ContactForm";
+import { Metadata } from "next";
 
 type Props = {
     params: Promise<{ lang: 'en' | 'el' }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { lang } = await params;
+
+    return {
+        alternates: {
+            canonical: `/${lang}`,
+            languages: {
+                'en': '/en',
+                'el': '/el',
+            },
+        },
+    };
+}
 
 export default async function Home({ params }: Props) {
     const { lang } = await params;
