@@ -134,14 +134,14 @@ export const data = {
                 {
                     name: "Personal Portfolio",
                     description: "A bilingual, print-friendly digital resume built with performance and accessibility in mind.",
-                    tech: ["Next.js 15", "Tailwind v4"],
+                    tech: ["Next.js 15", "Tailwind v4", "Server Actions", "i18n"],
                     repoUrl: "https://github.com/yourusername/portfolio",
                     liveUrl: "https://gzavlanis.vercel.app",
                 },
                 {
                     name: "Gallios Houses Website",
                     description: "A frontend website for a real estate agency built with Next.js",
-                    tech: ["Next.js 15"],
+                    tech: ["Next.js 15", "Server Actions", "i18n"],
                     repoUrl: "https://github.com/gzavlanis/gallios-houses-next",
                     liveUrl: "https://gallioshouses.gr"
                 },
@@ -304,14 +304,14 @@ export const data = {
                 {
                     name: "Gallios Houses Website",
                     description: "A frontend website for a real estate agency built with Next.js",
-                    tech: ["Next.js 15"],
+                    tech: ["Next.js 15", "Server Actions", "i18n"],
                     repoUrl: "https://github.com/gzavlanis/gallios-houses-next",
                     liveUrl: "https://gallioshouses.gr"
                 },
                 {
                     name: "Business Template Demo",
                     description: "A demo website template for small businesses built with Next.js and Tailwind CSS.",
-                    tech: ["Next.js 15", "Tailwind CSS"],
+                    tech: ["Next.js 15", "Tailwind CSS", "Server Actions"],
                     repoUrl: "https://github.com/gzavlanis/business-template-next",
                     liveUrl: "https://gzavlanis.github.io/business-template"
                 }
