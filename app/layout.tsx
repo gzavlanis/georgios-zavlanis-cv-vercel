@@ -5,6 +5,7 @@ import "./globals.css";
 import React from "react";
 import GoogleAnalytics from "@/app/components/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import {ThemeProvider} from "@/app/components/ThemeProvider";
 
 const montserrat = Montserrat({
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     disableTransitionOnChange
                 >
                     {children}
+                    <SpeedInsights />
                     <GoogleAnalytics />
                     <Analytics />
                 </ThemeProvider>
