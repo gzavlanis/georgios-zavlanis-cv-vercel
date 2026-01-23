@@ -10,13 +10,13 @@
 }
 
 :root {
-  --background: #f2f2f0; /* Γραφείο (Light) */
-  --foreground: #171717; /* Κείμενο (Light) */
+  --background: #f2f2f0;
+  --foreground: #171717;
 }
 
 .dark {
-  --background: #000000; /* Γραφείο (Dark) - Απόλυτο μαύρο */
-  --foreground: #ffffff; /* Κείμενο (Dark) - Απόλυτο λευκό για μέγιστη αντίθεση */
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @layer base {
@@ -42,4 +42,13 @@
   }
   h1, h2, h3, h4, p, span, li, a { color: black !important; text-shadow: none !important; }
   .absolute { display: none !important; }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

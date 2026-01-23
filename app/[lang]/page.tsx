@@ -3,6 +3,7 @@ import Hero from "@/app/components/Hero";
 import Experience from "@/app/components/Experience";
 import Skills from "@/app/components/Skills";
 import Education from "@/app/components/Education";
+import Projects from "@/app/components/Projects";
 import Hobbies from "@/app/components/Hobbies";
 import PrintButton from "@/app/components/PrintButton";
 import LanguageSwitch from "@/app/components/LanguageSwitch";
@@ -90,6 +91,12 @@ export default async function Home({ params }: Props) {
                             <Skills data={dict.skills} />
                         </RevealSection>
                     </div>
+
+                    <hr className="border-t border-neutral-200 dark:border-neutral-800 my-6" />
+
+                    <RevealSection>
+                        <Projects data={dict.projects} />
+                    </RevealSection>
 
                     <hr className="border-t border-neutral-200 dark:border-neutral-700 my-6" />
 

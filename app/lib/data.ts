@@ -128,6 +128,32 @@ export const data = {
                 { name: "Creative Writing", icon: "feather" }
             ],
         },
+        projects: {
+            title: "Selected Personal Projects",
+            list: [
+                {
+                    name: "Personal Portfolio",
+                    description: "A bilingual, print-friendly digital resume built with performance and accessibility in mind.",
+                    tech: ["Next.js 15", "Tailwind v4"],
+                    repoUrl: "https://github.com/yourusername/portfolio",
+                    liveUrl: "https://gzavlanis.vercel.app",
+                },
+                {
+                    name: "Gallios Houses Website",
+                    description: "A frontend website for a real estate agency built with Next.js",
+                    tech: ["Next.js 15"],
+                    repoUrl: "https://github.com/gzavlanis/gallios-houses-next",
+                    liveUrl: "https://gallioshouses.gr"
+                },
+                {
+                    name: "Business Template Demo",
+                    description: "A demo website template for small businesses built with Next.js and Tailwind CSS.",
+                    tech: ["Next.js 15", "Tailwind CSS"],
+                    repoUrl: "https://github.com/gzavlanis/business-template-next",
+                    liveUrl: "https://gzavlanis.github.io/business-template"
+                }
+            ]
+        },
         contactForm: {
             title: "Get in Touch",
             name: "Your Name",
@@ -264,6 +290,32 @@ export const data = {
                 { name: "Διάβασμα", icon: "book" },
                 { name: "Συγγραφή", icon: "feather"}
             ],
+        },
+        projects: {
+            title: "Επιλεγμένα Προσωπικά Έργα",
+            list: [
+                {
+                    name: "Προσωπικό Portfolio (Αυτή η σελίδα)",
+                    description: "Ένα δίγλωσσο, φιλικό προς εκτύπωση ψηφιακό βιογραφικό, εστιασμένο στην απόδοση.",
+                    tech: ["Next.js 15", "Tailwind v4", "Server Actions", "i18n"],
+                    repoUrl: "https://github.com/yourusername/portfolio",
+                    liveUrl: "https://gzavlanis.vercel.app"
+                },
+                {
+                    name: "Gallios Houses Website",
+                    description: "A frontend website for a real estate agency built with Next.js",
+                    tech: ["Next.js 15"],
+                    repoUrl: "https://github.com/gzavlanis/gallios-houses-next",
+                    liveUrl: "https://gallioshouses.gr"
+                },
+                {
+                    name: "Business Template Demo",
+                    description: "A demo website template for small businesses built with Next.js and Tailwind CSS.",
+                    tech: ["Next.js 15", "Tailwind CSS"],
+                    repoUrl: "https://github.com/gzavlanis/business-template-next",
+                    liveUrl: "https://gzavlanis.github.io/business-template"
+                }
+            ]
         },
         contactForm: {
             title: "Επικοινωνία",
