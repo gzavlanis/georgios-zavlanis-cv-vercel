@@ -94,9 +94,11 @@ export default async function Home({ params }: Props) {
 
                     <hr className="border-t border-neutral-200 dark:border-neutral-800 my-6" />
 
-                    <RevealSection>
-                        <Projects data={dict.projects} />
-                    </RevealSection>
+                    <div className={"print:hidden"}>
+                        <RevealSection>
+                            <Projects data={dict.projects} />
+                        </RevealSection>
+                    </div>
 
                     <hr className="border-t border-neutral-200 dark:border-neutral-700 my-6" />
 
