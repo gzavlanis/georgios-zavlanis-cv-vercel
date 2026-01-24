@@ -15,7 +15,7 @@ export default function Projects({ data }: { data: ResumeData['projects'] }) {
     };
 
     return (
-        <section className="relative group">
+        <section className="relative group print:hidden">
             <div className="flex justify-between items-end mb-6 border-b border-neutral-200 dark:border-neutral-700 pb-2">
                 <h2 className="font-heading text-2xl font-bold text-neutral-900 dark:text-white">
                     {data.title}
