@@ -3,14 +3,26 @@
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const FormDataSchema = z.object({
     name: z.string().min(1, "Name is required"),
     email: z.string().email("Invalid email address"),
     message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
-export async function sendEmail(prevState: null, formData: FormData) {
+export type ContactFormState = {
+    success: boolean;
+    error?: string;
+};
+
+export async function sendEmail(prevState: ContactFormState | null, formData: FormData) {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+        console.error("❌ MISSING RESEND_API_KEY in .env file");
+        return { success: false, error: "Server configuration error (Missing API Key)" };
+    }
+
+    const resend = new Resend(apiKey);
     const data = Object.fromEntries(formData.entries());
     const result = FormDataSchema.safeParse(data);
 
@@ -28,15 +40,15 @@ export async function sendEmail(prevState: null, formData: FormData) {
             subject: `New Message from ${name} (Portfolio)`,
             text: message,
             html: `
-                    <div style="font-family: sans-serif; line-height: 1.6; color: #333;">
-                        <h3>You have a new message!</h3>
-                        <p><strong>From:</strong> ${name} (${email})</p>
-                        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
-                        <p><strong>Message:</strong></p>
-                        <blockquote style="background: #f9f9f9; padding: 15px; border-left: 4px solid #000;">
-                            ${message.replace(/\n/g, '<br>')}
-                        </blockquote>
-                    </div>
+                <div style="font-family: sans-serif; line-height: 1.6; color: #333;">
+                    <h3>You have a new message!</h3>
+                    <p><strong>From:</strong> ${name} (${email})</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+                    <p><strong>Message:</strong></p>
+                    <blockquote style="background: #f9f9f9; padding: 15px; border-left: 4px solid #000;">
+                        ${message.replace(/\n/g, '<br>')}
+                    </blockquote>
+                </div>
             `
         });
 
