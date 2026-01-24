@@ -92,13 +92,12 @@ export default async function Home({ params }: Props) {
                         </RevealSection>
                     </div>
 
-                    <hr className="border-t border-neutral-200 dark:border-neutral-800 my-6" />
-
-                    <div className={"print:hidden"}>
+                    {/*<div className="print:hidden">*/}
+                        <hr className="border-t border-neutral-200 dark:border-neutral-800 my-6" />
                         <RevealSection>
                             <Projects data={dict.projects} />
                         </RevealSection>
-                    </div>
+                    {/*</div>*/}
 
                     <hr className="border-t border-neutral-200 dark:border-neutral-700 my-6" />
 
@@ -108,7 +107,6 @@ export default async function Home({ params }: Props) {
 
                     <div className="print:hidden">
                         <hr className="border-t border-neutral-200 dark:border-neutral-700 my-6" />
-
                         <RevealSection>
                             <ContactForm data={dict.contactForm} />
                         </RevealSection>
