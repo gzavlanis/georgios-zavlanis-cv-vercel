@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 const locales = ['en', 'el'];
 const defaultLocale = 'en';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
 
     if (pathname === '/') {
@@ -20,6 +20,8 @@ export function middleware(request: NextRequest) {
             new URL(`/${defaultLocale}${pathname}`, request.url)
         );
     }
+
+    return NextResponse.next();
 }
 
 export const config = {
