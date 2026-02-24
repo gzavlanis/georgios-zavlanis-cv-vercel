@@ -8,7 +8,6 @@ export default function GoogleAnalytics() {
                 strategy="afterInteractive"
             />
 
-            {/* Initialize Google Analytics */}
             <Script id="google-analytics" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
