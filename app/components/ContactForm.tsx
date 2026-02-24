@@ -14,7 +14,7 @@ function SubmitButton({ label }: { label: string }) {
             type="submit"
             disabled={pending}
             className="group flex items-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-black px-6 py-3 rounded-full font-heading font-bold text-sm hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-4"
-            aria-label="Submit form"
+            aria-label={label}
         >
             {pending ? (
                 <span className="animate-pulse">Sending...</span>
