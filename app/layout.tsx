@@ -6,7 +6,8 @@ import React from "react";
 import GoogleAnalytics from "@/app/components/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import {ThemeProvider} from "@/app/components/ThemeProvider";
+import { ThemeProvider } from "@/app/components/ThemeProvider";
+import CookieConsent from "@/app/components/CookieConsent";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -80,6 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <GoogleAnalytics />
                     <Analytics />
                 </ThemeProvider>
+            <CookieConsent />
             </body>
         </html>
     );
