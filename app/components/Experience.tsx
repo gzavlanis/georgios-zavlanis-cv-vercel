@@ -15,7 +15,7 @@ export default function Experience({ data }: { data: ResumeData['experience'] })
                             <span className="font-serif italic text-neutral-600 dark:text-neutral-300">{job.period}</span>
                         </div>
 
-                        <div className="text-sm font-semibold uppercase tracking-wider text-neutral-600 mb-4">
+                        <div className="text-sm font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-4">
                             {job.company} • {job.location}
                         </div>
 
