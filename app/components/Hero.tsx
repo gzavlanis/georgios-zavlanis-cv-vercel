@@ -46,12 +46,14 @@ export default function Hero({ data, contact, about }: Props) {
                 <a
                     href={contact.socials.linkedin}
                     target="_blank"
+                    aria-label="Open LinkedIn"
                     className="p-2 border border-transparent hover:border-neutral-200 text-neutral-900 dark:text-white dark:border-white rounded-full transition-all hover:bg-neutral-50 dark:hover:bg-neutral-700"
                 >
                     <Linkedin strokeWidth={1.5} size={20} />
                 </a>
                 <a
                     href={contact.socials.github}
+                    aria-label="Show Github profile page"
                     target="_blank"
                     className="p-2 border border-transparent hover:border-neutral-200 text-neutral-900 dark:text-white dark:border-white rounded-full transition-all hover:bg-neutral-50 dark:hover:bg-neutral-700"
                 >

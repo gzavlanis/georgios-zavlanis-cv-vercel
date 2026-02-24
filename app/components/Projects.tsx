@@ -59,7 +59,7 @@ export default function Projects({ data }: { data: ResumeData['projects'] }) {
                     >
                         <h3 className="font-bold text-neutral-900 dark:text-white font-heading text-lg mb-2 flex items-center gap-2">
                             {project.name}
-                            {project.repoUrl && <ArrowUpRight size={14} className="text-neutral-400" />}
+                            {project.repoUrl && <ArrowUpRight size={14} className="text-neutral-600" />}
                         </h3>
 
                         <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-4 line-clamp-2 h-10 leading-relaxed">
@@ -92,6 +92,7 @@ export default function Projects({ data }: { data: ResumeData['projects'] }) {
 
                             <a
                                 href={project.repoUrl}
+                                aria-label="Show source code of the project"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-1.5 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
