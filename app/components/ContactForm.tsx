@@ -63,7 +63,6 @@ export default function ContactForm({ data }: { data: ResumeData['contactForm'] 
             </h2>
 
             <form action={handleSubmit} className="space-y-8 max-w-xl">
-                {/* Name Input */}
                 <div className="relative group">
                     <input
                         type="text"
