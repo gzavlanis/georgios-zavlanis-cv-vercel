@@ -11,9 +11,9 @@ export default function Education({ data }: { data: ResumeData['education'] }) {
                     <div key={index}>
                         <h3 className="font-bold text-neutral-800 dark:text-white">{item.institution}</h3>
                         <p className="text-neutral-600 dark:text-neutral-400 italic font-serif">{item.degree}</p>
-                        <p className="text-xs text-neutral-600 dark:text-neutral-500 mt-1">{item.period}</p>
+                        <p className="text-xs text-neutral-600 dark:text-neutral-300 mt-1">{item.period}</p>
                         {item.details && (
-                            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2 font-light">{item.details}</p>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-2 font-light">{item.details}</p>
                         )}
                     </div>
                 ))}

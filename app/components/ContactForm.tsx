@@ -48,7 +48,7 @@ export default function ContactForm({ data }: { data: ResumeData['contactForm'] 
                 </h3>
                 <button
                     onClick={() => setStatus('idle')}
-                    className="mt-6 text-sm underline text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+                    className="mt-6 text-sm underline text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
                 >
                     Send another message
                 </button>
@@ -72,7 +72,7 @@ export default function ContactForm({ data }: { data: ResumeData['contactForm'] 
                         placeholder="Your name"
                         className="peer w-full bg-transparent border-b border-neutral-300 dark:border-neutral-700 py-2 text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-900 dark:focus:border-white transition-colors placeholder-transparent"
                     />
-                    <label className="absolute left-0 -top-3.5 text-xs text-neutral-500 dark:text-neutral-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-neutral-900 dark:peer-focus:text-white pointer-events-none font-body">
+                    <label className="absolute left-0 -top-3.5 text-xs text-neutral-600 dark:text-neutral-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-neutral-900 dark:peer-focus:text-white pointer-events-none font-body">
                         {data.name}
                     </label>
                 </div>
@@ -85,7 +85,7 @@ export default function ContactForm({ data }: { data: ResumeData['contactForm'] 
                         placeholder="Your email"
                         className="peer w-full bg-transparent border-b border-neutral-300 dark:border-neutral-700 py-2 text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-900 dark:focus:border-white transition-colors placeholder-transparent"
                     />
-                    <label className="absolute left-0 -top-3.5 text-xs text-neutral-500 dark:text-neutral-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-neutral-900 dark:peer-focus:text-white pointer-events-none font-body">
+                    <label className="absolute left-0 -top-3.5 text-xs text-neutral-600 dark:text-neutral-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-neutral-900 dark:peer-focus:text-white pointer-events-none font-body">
                         {data.email}
                     </label>
                 </div>
@@ -97,7 +97,7 @@ export default function ContactForm({ data }: { data: ResumeData['contactForm'] 
                         placeholder="Message"
                         className="peer w-full bg-transparent border-b border-neutral-300 dark:border-neutral-700 py-2 text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-900 dark:focus:border-white transition-colors placeholder-transparent resize-none"
                     ></textarea>
-                    <label className="absolute left-0 -top-3.5 text-xs text-neutral-500 dark:text-neutral-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-neutral-900 dark:peer-focus:text-white pointer-events-none font-body">
+                    <label className="absolute left-0 -top-3.5 text-xs text-neutral-600 dark:text-neutral-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-neutral-900 dark:peer-focus:text-white pointer-events-none font-body">
                         {data.message}
                     </label>
                 </div>

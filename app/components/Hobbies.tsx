@@ -25,10 +25,10 @@ export default function Hobbies({ data }: { data: ResumeData['hobbies'] }) {
                                 <IconComponent
                                     size={24}
                                     strokeWidth={1.5}
-                                    className="text-neutral-600 group-hover:text-neutral-900 dark:text-neutral-400 dark:group-hover:text-neutral-500 transition-colors"
+                                    className="text-neutral-600 group-hover:text-neutral-900 dark:text-neutral-300 dark:group-hover:text-neutral-500 transition-colors"
                                 />
                             </div>
-                            <span className="text-sm font-medium text-neutral-600 dark:text-neutral-400 font-body tracking-wide group-hover:text-neutral-900 dark:group-hover:text-neutral-500">
+                            <span className="text-sm font-medium text-neutral-600 dark:text-neutral-300 font-body tracking-wide group-hover:text-neutral-900 dark:group-hover:text-neutral-500">
                                 {hobby.name}
                             </span>
                         </div>

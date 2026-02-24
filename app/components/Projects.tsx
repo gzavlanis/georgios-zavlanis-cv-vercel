@@ -68,7 +68,7 @@ export default function Projects({ data }: { data: ResumeData['projects'] }) {
 
                         <div className="flex flex-wrap gap-1.5 mb-6">
                             {project.tech.slice(0, 3).map((tech) => (
-                                <span key={tech} className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-neutral-500 dark:text-neutral-400 font-mono">
+                                <span key={tech} className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 font-mono">
                         {tech}
                     </span>
                             ))}
@@ -81,7 +81,7 @@ export default function Projects({ data }: { data: ResumeData['projects'] }) {
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-1.5 text-xs font-bold text-neutral-900 dark:text-white hover:underline decoration-neutral-400 underline-offset-4"
                                 >
-                                    <Globe size={14} className="text-neutral-500 dark:text-neutral-400" />
+                                    <Globe size={14} className="text-neutral-600 dark:text-neutral-300" />
                                     Live Demo
                                 </a>
                             )}

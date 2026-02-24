@@ -12,7 +12,7 @@ export default function Experience({ data }: { data: ResumeData['experience'] })
                     <div key={index} className="group">
                         <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
                             <h3 className="text-xl font-bold text-neutral-800 dark:text-white">{job.role}</h3>
-                            <span className="font-serif italic text-neutral-500 dark:text-neutral-400">{job.period}</span>
+                            <span className="font-serif italic text-neutral-600 dark:text-neutral-300">{job.period}</span>
                         </div>
 
                         <div className="text-sm font-semibold uppercase tracking-wider text-neutral-600 mb-4">

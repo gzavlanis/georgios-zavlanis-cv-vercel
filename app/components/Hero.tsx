@@ -24,7 +24,7 @@ export default function Hero({ data, contact, about }: Props) {
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white mb-4 tracking-tight leading-tight">
                 {data.name}
             </h1>
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-8 border-b border-neutral-100 dark:border-neutral-700 pb-8 w-1/2 mx-auto">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-neutral-600 dark:text-neutral-300 mb-8 border-b border-neutral-100 dark:border-neutral-700 pb-8 w-1/2 mx-auto">
                 {data.title}
             </p>
 
@@ -36,10 +36,10 @@ export default function Hero({ data, contact, about }: Props) {
                 <a href={`mailto:${contact.email}`} className="hover:text-black transition-colors flex items-center gap-1">
                     {contact.email}
                 </a>
-                <span className="text-neutral-300 dark:text-neutral-500 select-none">|</span>
-                <span className="flex items-center gap-1 dark:text-neutral-500">{contact.phone}</span>
-                <span className="text-neutral-300 select-none dark:text-neutral-500">|</span>
-                <span className="flex items-center gap-1 dark:text-neutral-500">{contact.address}</span>
+                <span className="text-neutral-600 dark:text-neutral-300 select-none">|</span>
+                <span className="flex items-center gap-1 dark:text-neutral-300">{contact.phone}</span>
+                <span className="text-neutral-600 select-none dark:text-neutral-300">|</span>
+                <span className="flex items-center gap-1 dark:text-neutral-300">{contact.address}</span>
             </div>
 
             <div className="flex justify-center gap-5 text-neutral-900">

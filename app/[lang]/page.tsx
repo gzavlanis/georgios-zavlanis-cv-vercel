@@ -110,7 +110,7 @@ export default async function Home({ params }: Props) {
                         </RevealSection>
                     </div>
 
-                    <div className="mt-16 pt-8 border-t border-neutral-100 dark:border-neutral-800 text-center text-xs text-neutral-600 dark:text-neutral-500 font-serif italic">
+                    <div className="mt-16 pt-8 border-t border-neutral-100 dark:border-neutral-800 text-center text-xs text-neutral-600 dark:text-neutral-300 font-serif italic">
                         Georgios Zavlanis • Full Stack Developer • {new Date().getFullYear()}
                     </div>
                 </div>
