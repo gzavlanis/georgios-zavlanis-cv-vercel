@@ -63,6 +63,16 @@ export default function ContactForm({ data }: { data: ResumeData['contactForm'] 
             </h2>
 
             <form action={handleSubmit} className="space-y-8 max-w-xl">
+                <div className="absolute -left-2499.75" aria-hidden="true">
+                    <label htmlFor="address">Address</label>
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        tabIndex={-1}
+                        autoComplete="off"
+                    />
+                </div>
                 <div className="relative group">
                     <input
                         type="text"
