@@ -42,10 +42,10 @@ export const metadata: Metadata = {
         siteName: SITE_NAME,
         images: [
             {
-                url: "/profile.jpg",
-                width: 800,
-                height: 800,
-                alt: "Georgios Zavlanis Profile",
+                url: "/og",
+                width: 1200,
+                height: 630,
+                alt: "Georgios Zavlanis Logo Preview",
             },
         ],
     },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: SITE_NAME,
         description: SITE_DESCRIPTION,
-        images: ["/profile.jpg"],
+        images: ["/og"],
     },
 
     icons: {

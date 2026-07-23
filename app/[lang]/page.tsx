@@ -104,7 +104,6 @@ export default async function Home({ params }: Props) {
                     </RevealSection>
 
                     <div className="print:hidden">
-                        <hr className="border-t border-neutral-200 dark:border-neutral-700 my-6" />
                         <RevealSection>
                             <ContactForm data={dict.contactForm} />
                         </RevealSection>
