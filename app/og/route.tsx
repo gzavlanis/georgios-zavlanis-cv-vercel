@@ -1,14 +1,9 @@
 import { ImageResponse } from "next/og";
-import { BASE_URL } from "@/app/lib/constants";
 
 export const runtime = "edge";
 
 export async function GET() {
     try {
-        const svgRes = await fetch(`${BASE_URL}/icon.svg`);
-        const svgText = await svgRes.text();
-        const svgDataUrl = `data:image/svg+xml;base64,${Buffer.from(svgText).toString("base64")}`;
-
         return new ImageResponse(
             (
                 <div
@@ -43,18 +38,28 @@ export async function GET() {
                             backgroundColor: "#ffffff",
                             padding: "60px 80px",
                             borderRadius: "16px",
-                            boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+                            boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
                             border: "1px solid #e5e5e5",
                         }}
                     >
-                        <img
-                            src={svgDataUrl}
-                            alt="Logo"
-                            width="140"
-                            height="140"
-                            style={{ marginBottom: "32px" }}
-                        />
-
+                        <div
+                            style={{
+                                width: "120px",
+                                height: "120px",
+                                backgroundColor: "#171717",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                color: "#ffffff",
+                                fontSize: "52px",
+                                fontWeight: 900,
+                                letterSpacing: "-3px",
+                                marginBottom: "32px",
+                                fontFamily: "Arial, sans-serif",
+                            }}
+                        >
+                            GZ_
+                        </div>
                         <div
                             style={{
                                 fontSize: "48px",
@@ -66,7 +71,6 @@ export async function GET() {
                         >
                             Georgios Zavlanis
                         </div>
-
                         <div
                             style={{
                                 fontSize: "24px",
